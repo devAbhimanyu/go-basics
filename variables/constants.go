@@ -70,10 +70,10 @@ func typedConstants() {
 	// with untyped constant type inference takes place
 	// Go is a stringly typed language and float * int should not be possible
 	const b float64 = 1.1 * 2
-	fmt.Printf("type of b is %T ", b)
+	fmt.Printf("type of b is %T \n", b)
 
 	//untyped constants help with normal variable declarations and helps bring flexibility to Go's strongly typed rules
-	var i int = n //n changes to int
+	var i int = n     //n changes to int
 	var j float64 = n // on the backend => var j float64 = float64(n)
 	_, _ = i, j
 }

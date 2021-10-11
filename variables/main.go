@@ -53,6 +53,8 @@ func main() {
 	usingFmt()
 
 	constants()
+
+	iotaVals()
 }
 
 func swap(a int, b int) {
