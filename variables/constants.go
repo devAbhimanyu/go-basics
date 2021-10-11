@@ -55,4 +55,25 @@ func constants() {
 		const y =0;
 		fmt.Printf("The output is %v", x/y); //=>invalid operation: division by zero compiler
 	*/
+	typedConstants()
+}
+
+func typedConstants() {
+	//this is a typed constant
+	const a int = 10
+
+	//this is an untyped constant
+	const strVal = "abc"
+	const pi = 3.14
+	const n = 1
+	fmt.Println(a, strVal, pi)
+	// with untyped constant type inference takes place
+	// Go is a stringly typed language and float * int should not be possible
+	const b float64 = 1.1 * 2
+	fmt.Printf("type of b is %T ", b)
+
+	//untyped constants help with normal variable declarations and helps bring flexibility to Go's strongly typed rules
+	var i int = n //n changes to int
+	var j float64 = n // on the backend => var j float64 = float64(n)
+	_, _ = i, j
 }
