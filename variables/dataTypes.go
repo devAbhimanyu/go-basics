@@ -88,5 +88,7 @@ func types() {
 	fmt.Printf("%T\n", f) // => func()
 }
 
-func f() {
+func f() string {
+	fmt.Println("this is a function")
+	return ""
 }
